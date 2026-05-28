@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroSustentável - Simulador de Umidade do Solo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span class="folha">🌱</span> Agro<span class="verde">Sustentável</span>
+            </div>
+            <div class="tag-projeto">Projeto Agrinho 2026 | 1º EM</div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro-section">
+            <h1>Simulador Inteligente de Irrigação</h1>
+            <p>Demonstração prática de como sensores de umidade e automação reduzem o desperdício de água na agricultura, preservando os recursos naturais.</p>
+        </section>
+
+        <div class="dashboard-grid">
+            <section class="simulador-card">
+                <h2><span class="icon">🎮</span> Painel de Controle</h2>
+                
+                <div class="controles-grupo">
+                    <div class="control-field">
+                        <label for="tipoSolo">Tipo de Solo:</label>
+                        <select id="tipoSolo">
+                            <option value="arenoso">Arenoso (Secagem rápida)</option>
+                            <option value="limoso" selected>Limoso (Equilibrado)</option>
+                            <option value="argiloso">Argiloso (Retém muita água)</option>
+                        </select>
+                    </div>
+
+                    <div class="control-field">
+                        <label for="clima">Clima Atual:</label>
+                        <select id="clima">
+                            <option value="sol">Ensolarado / Seco</option>
+                            <option value="nublado">Nublado / Ameno</option>
+                            <option value="chuva">Chuva (Recarga natural)</option>
+                        </select>
+                    </div>
+
+                    <div class="control-field">
+                        <label for="modoOperacao">Modo de Irrigação:</label>
+                        <select id="modoOperacao">
+                            <option value="manual">Manual (Você controla)</option>
+                            <option value="automatico">Automático (Smart IoT)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="display-monitoramento">
+                    <div class="status-barra-container">
+                        <div class="barra-umidade-fundo">
+                            <div id="barraUmidadeProgresso" class="barra-umidade-preenchimento"></div>
+                        </div>
+                        <div class="marcas-alvo">
+                            <span class="marca min">Mín: 50%</span>
+                            <span class="marca max">Máx: 80%</span>
+                        </div>
+                    </div>
+
+                    <div class="metricas-leitura">
+                        <div class="metrica-bloco">
+                            <span class="metrica-titulo">Umidade Atual</span>
+                            <span id="txtUmidade" class="metrica-valor">50%</span>
+                        </div>
+                        <div class="metrica-bloco">
+                            <span class="metrica-titulo">Status do Solo</span>
+                            <span id="txtStatusSolo" class="status-tag ideal">Ideal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="acoes-container">
+                    <button id="btnIrrigar" class="btn-irrigar">💧 Ativar Irrigadores</button>
+                    <div id="statusIrrigador" class="status-irrigador-aviso">Irrigadores desligados</div>
+                </div>
+            </section>
+
+            <section class="info-card">
+                <h2><span class="icon">💡</span> Ciência do Solo & Sustentabilidade</h2>
+                <p>O manejo correto da água respeita a <strong>Capacidade de Campo</strong> do solo (sua retenção natural de água).</p>
+                
+                <table class="tabela-info">
+                    <thead>
+                        <tr>
+                            <th>Solo</th>
+                            <th>Retenção</th>
+                            <th>Estratégia Adequada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Arenoso</strong></td>
+                            <td class="text-baixa">Baixa</td>
+                            <td>Irrigações curtas e frequentes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Limoso</strong></td>
+                            <td class="text-media">Média</td>
+                            <td>Turnos regulares e equilibrados.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Argiloso</strong></td>
+                            <td class="text-alta">Alta</td>
+                            <td>Grande volume, bem espaçado.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="dica-sustentavel">
+                    <h3>🌱 Impacto do Projeto:</h3>
+                    <p>A automação baseada em sensores inteligentes economiza até <strong>40% de água</strong> e evita que as raízes apodreçam por excesso de umidade.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Projeto Agrinho - Desenvolvido com foco em Agricultura Sustentável.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
